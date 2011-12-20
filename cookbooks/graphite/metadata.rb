@@ -5,7 +5,6 @@ description      "Installs/Configures graphite"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.rdoc'))
 version          "0.1.0"
 
-depends  "python"
 depends  "apache2"
 supports "ubuntu"
 
