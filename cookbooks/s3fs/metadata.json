@@ -32,7 +32,6 @@
   },
   "attributes": {
     "access_key": {
-      "default": "",
       "type": "string",
       "multiple_values": false,
       "description": "amazon key",
