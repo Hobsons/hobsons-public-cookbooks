@@ -20,7 +20,7 @@
 include_recipe "build-essential"
 include_recipe "git"
 
-package "nodejs"
+include_recipe "nodejs"
 
 execute "checkout statsd" do
   command "git clone git://github.com/etsy/statsd"
