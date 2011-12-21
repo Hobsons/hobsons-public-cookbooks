@@ -33,6 +33,11 @@ template "/opt/graphite/conf/storage-schemas.conf" do
   group "www-data"
 end
 
+directory "/opt/graphite/storage/whisper/" do
+  owner "www-data"
+  group "www-data"
+end
+
 template "/etc/init/carbon-cache.conf" do
   source "carbon-cache.conf.erb"
   owner "www-data"
