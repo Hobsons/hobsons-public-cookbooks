@@ -7,6 +7,7 @@ version          "0.0.1"
 
 depends "build-essential"
 depends "git"
+depends "nodejs"
 supports "ubuntu"
 
 recipe  "statsd::default", "Installs statsd for use with graphite"
