@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "nodejs": ">= 0.0.0",
     "git": ">= 0.0.0",
     "build-essential": ">= 0.0.0"
   },
