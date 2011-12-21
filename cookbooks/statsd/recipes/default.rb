@@ -20,7 +20,7 @@
 include_recipe "build-essential"
 include_recipe "git"
 
-package "nodejs"
+include_recipe "nodejs"
 
 execute "checkout statsd" do
   command "git clone git://github.com/etsy/statsd"
@@ -31,7 +31,7 @@ end
 package "debhelper"
 
 execute "build debian package" do
-  command "dpkg-buildpackage -us -uc"
+  command "dpkg-buildpackage -us -uc -d"
   creates "/tmp/statsd_0.0.1_all.deb"
   cwd "/tmp/statsd"
 end
