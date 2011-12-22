@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "apt": ">= 0.0.0"
   },
   "name": "flume",
   "maintainer_email": "coders@infochimps.com",

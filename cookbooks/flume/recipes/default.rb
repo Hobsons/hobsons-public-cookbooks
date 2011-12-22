@@ -20,7 +20,7 @@
 #
 
 #include_recipe "java::sun"
-#include_recipe "apt"
+include_recipe "apt"
 #include_recipe "mountable_volumes"
 class Chef::Resource::Template ; include FlumeCluster ; end
 
