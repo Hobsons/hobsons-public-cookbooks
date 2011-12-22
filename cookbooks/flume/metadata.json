@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "apt": ">= 0.0.0"
+  },
+  "name": "flume",
+  "maintainer_email": "pmcfadin@hobsons.com",
+  "attributes": {
+  },
+  "license": "Apache 2.0",
+  "suggestions": {
+  },
+  "platforms": {
+  },
+  "maintainer": "Hobsons",
+  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES:\n\n= USAGE:\n\n",
+  "version": "1.0.0",
+  "recommendations": {
+  },
+  "recipes": {
+    "flume::default": "Base configuration for flume"
+  },
+  "groupings": {
+  },
+  "conflicting": {
+  },
+  "replacing": {
+  },
+  "description": "Installs/Configures flume",
+  "providing": {
+  }
+}

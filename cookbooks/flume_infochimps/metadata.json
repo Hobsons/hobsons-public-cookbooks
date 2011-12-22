@@ -2,7 +2,7 @@
   "dependencies": {
     "apt": ">= 0.0.0"
   },
-  "name": "flume",
+  "name": "flume_infochimps/",
   "maintainer_email": "coders@infochimps.com",
   "attributes": {
     "flume/data_dir": {
