@@ -33,3 +33,6 @@ default[:flume][:data_dir] = "/data/db/flume"
 # Set the following two attributes to allow writing to s3 buckets:
 default[:flume][:aws_access_key] = nil
 default[:flume][:aws_secret_key] = nil
+
+#info for adding repo
+default[:hadoop][:cdh_version] = "cdh3"
