@@ -23,7 +23,7 @@
 # to the templates.
 include_recipe "flume::default"
 
-package "flume-master"
+#package "flume-master"
 
 service "flume-master" do
   supports :restart => true, :start=>true, :stop => true
