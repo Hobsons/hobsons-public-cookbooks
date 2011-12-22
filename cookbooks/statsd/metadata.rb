@@ -28,5 +28,4 @@ attribute "statsd/graphite_host",
   :display_name => "Graphite host",
   :description => "Host address for graphite. Statsd will forward events to this host.",
   :default => "localhost",
-  :required => true,
   :recipes => [ "statsd::default"]
