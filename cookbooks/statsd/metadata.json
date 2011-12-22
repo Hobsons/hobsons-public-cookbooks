@@ -36,7 +36,7 @@
       "description": "Listening port for graphite. Statsd will forward events to this port"
     },
     "statsd/graphite_host": {
-      "required": "optional",
+      "required": "required",
       "calculated": false,
       "choice": [
 
