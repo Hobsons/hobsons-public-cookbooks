@@ -1,11 +1,25 @@
 {
   "dependencies": {
-    "python": ">= 0.0.0",
     "apache2": ">= 0.0.0"
   },
   "name": "graphite",
   "maintainer_email": "darrin@heavywater.ca",
   "attributes": {
+    "graphite/carbon/local_data_dir": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "/opt/graphite/storage/whisper/",
+      "type": "string",
+      "recipes": [
+        "graphite::default",
+        "graphite::carbon"
+      ],
+      "display_name": "Graphite Data Directory",
+      "description": "Graphite data dir. Location for graphite files."
+    },
     "graphite/password": {
       "required": "required",
       "calculated": false,

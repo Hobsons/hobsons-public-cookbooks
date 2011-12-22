@@ -8,11 +8,12 @@
   "maintainer_email": "jon@blankpad.net",
   "attributes": {
     "statsd/port": {
-      "required": "required",
+      "required": "optional",
       "calculated": false,
       "choice": [
 
       ],
+      "default": "8125",
       "type": "string",
       "recipes": [
         "statsd::default"
@@ -21,11 +22,12 @@
       "description": "Listening port for statsd. Destination for sending events."
     },
     "statsd/graphite_port": {
-      "required": "required",
+      "required": "optional",
       "calculated": false,
       "choice": [
 
       ],
+      "default": "2003",
       "type": "string",
       "recipes": [
         "statsd::default"
@@ -34,11 +36,12 @@
       "description": "Listening port for graphite. Statsd will forward events to this port"
     },
     "statsd/graphite_host": {
-      "required": "required",
+      "required": "optional",
       "calculated": false,
       "choice": [
 
       ],
+      "default": "localhost",
       "type": "string",
       "recipes": [
         "statsd::default"
@@ -53,7 +56,7 @@
   "platforms": {
     "ubuntu": ">= 0.0.0"
   },
-  "maintainer": "Jon Wood",
+  "maintainer": "Initial owner: Jon Wood. Further enhancements: Patrick McFadin",
   "long_description": "= DESCRIPTION:\n\nInstalls and configures Statsd (http://github.com/etsy/statsd)\n\n= REQUIREMENTS:\n\nUbuntu 11.04 (Natty)\n\n= ATTRIBUTES:\n\n= USAGE:\n\n= CAVEATS:\n\n",
   "version": "0.0.1",
   "recommendations": {
