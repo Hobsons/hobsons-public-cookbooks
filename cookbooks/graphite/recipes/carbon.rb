@@ -24,7 +24,8 @@ template "/opt/graphite/conf/carbon.conf" do
   group "www-data"
   variables( :line_receiver_interface => node[:graphite][:carbon][:line_receiver_interface],
              :pickle_receiver_interface => node[:graphite][:carbon][:pickle_receiver_interface],
-             :cache_query_interface => node[:graphite][:carbon][:cache_query_interface] )
+             :cache_query_interface => node[:graphite][:carbon][:cache_query_interface],
+             :local_data_dir => node[:graphite][:carbon][:local_data_dir])
   notifies :restart, "service[carbon-cache]"
 end
 
@@ -33,7 +34,7 @@ template "/opt/graphite/conf/storage-schemas.conf" do
   group "www-data"
 end
 
-directory "/opt/graphite/storage/whisper/" do
+directory node[:graphite][:carbon][:local_data_dir] do
   owner "www-data"
   group "www-data"
 end

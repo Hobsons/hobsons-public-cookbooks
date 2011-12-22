@@ -8,7 +8,7 @@ version          "0.1.0"
 depends  "apache2"
 supports "ubuntu"
 
-recipe  "graphite::default", "Installs all Graphite components"
+recipe "graphite::default", "Installs all Graphite components"
 recipe "graphite::whisper", "Installs Whisper Graphite component"
 recipe "graphite::carbon", "Installs Carbon Graphite component"
 recipe "graphite::web", "Installs Web Graphite component"
@@ -18,3 +18,9 @@ attribute "graphite/password",
   :description => "Password for Graphite Web interface",
   :required => true,
   :recipes => [ "graphite::default", "graphite::web" ]
+  
+attribute "graphite/carbon/local_data_dir",
+  :display_name => "Graphite Data Directory",
+  :description => "Graphite data dir. Location for graphite files.",
+  :default => "/opt/graphite/storage/whisper/",
+  :recipes => [ "graphite::default", "graphite::carbon" ]

@@ -1,4 +1,4 @@
-maintainer       "Jon Wood"
+maintainer       "Initial owner: Jon Wood. Further enhancements: Patrick McFadin"
 maintainer_email "jon@blankpad.net"
 license          "Apache 2.0"
 description      "Installs/Configures statsd"
@@ -15,17 +15,17 @@ recipe  "statsd::default", "Installs statsd for use with graphite"
 attribute "statsd/port",
   :display_name => "Statsd port",
   :description => "Listening port for statsd. Destination for sending events.",
-  :required => true,
+  :default => "8125",
   :recipes => [ "statsd::default"]
   
 attribute "statsd/graphite_port",
   :display_name => "Graphite port",
   :description => "Listening port for graphite. Statsd will forward events to this port",
-  :required => true,
+  :default => "2003",
   :recipes => [ "statsd::default"]
   
 attribute "statsd/graphite_host",
   :display_name => "Graphite host",
   :description => "Host address for graphite. Statsd will forward events to this host.",
-  :required => true,
+  :default => "localhost",
   :recipes => [ "statsd::default"]
