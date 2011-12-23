@@ -33,8 +33,8 @@ bash "add node.js repository" do
   user "root"
   code <<-EOH
     add-apt-repository ppa:chris-lea/node.js
+    apt-get update
   EOH
-  notifies :run, "execute[apt-get update]"
 end
 
 package "nodejs" do
