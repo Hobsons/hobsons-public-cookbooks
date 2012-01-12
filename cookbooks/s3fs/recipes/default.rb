@@ -16,7 +16,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-%w{ pkg-config libcurl4-openssl-dev libfuse-dev libfuse2 }.each do |pkg|
+include_recipe "build-essential"
+
+%w{ pkg-config libcurl4-openssl-dev }.each do |pkg|
   package pkg
 end
 
@@ -24,6 +26,8 @@ remote_file "/tmp/s3fs-1.61.tar.gz" do
   source "http://s3fs.googlecode.com/files/s3fs-1.61.tar.gz"
   mode 0644
 end
+
+#http://iweb.dl.sourceforge.net/project/fuse/fuse-2.X/2.8.6/fuse-2.8.6.tar.gz
 
 bash "install s3fs" do
   cwd "/tmp"
