@@ -1,80 +1,31 @@
 {
-  "maintainer": "Jack Russell Software Company",
-  "description": "Installs and configures s3fs for creating a file system to an s3 bucket",
-  "recommendations": {
-
+  "dependencies": {
+    "build-essential": ">= 0.0.0"
   },
-  "maintainer_email": "team@jackrussellsoftware.com",
-  "recipes": {
-    "s3fs": ""
-  },
-  "suggestions": {
-
-  },
-  "platforms": {
-    "ubuntu": [
-
-    ],
-    "centos": [
-
-    ],
-    "debian": [
-
-    ],
-    "redhat": [
-
-    ]
-  },
-  "version": "0.0.1",
   "name": "s3fs",
-  "conflicting": {
-
-  },
+  "maintainer_email": "pmcfadin@hobsons.com",
   "attributes": {
-    "access_key": {
-      "type": "string",
-      "multiple_values": false,
-      "description": "amazon key",
-      "display_name": "AMAZON_ACCESS_KEY_ID",
-      "recipes": [
-
-      ],
-      "required": true
-    },
-    "secret_key": {
-      "type": "string",
-      "multiple_values": false,
-      "description": "amazon secret access key",
-      "display_name": "AMAZON_SECRET_ACCESS_KEY",
-      "recipes": [
-
-      ],
-      "required": true
-    
-    },
-    "s3fs\/bucket": {
-      "type": "string",
-      "multiple_values": false,
-      "description": "name of s3 bucket to map",
-      "display_name": "s3 Bucket",
-      "recipes": [
-
-      ],
-      "required": true
-    }
-    
-  },
-  "providing": {
-    "s3fs": [
-
-    ]
   },
   "license": "Apache 2.0",
-  "long_description": "",
-  "replacing": {
-
+  "suggestions": {
   },
-  "dependencies": {
-
+  "platforms": {
+  },
+  "maintainer": "Hobsons",
+  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES:\n\n= USAGE:\n\n",
+  "version": "0.0.1",
+  "recommendations": {
+  },
+  "recipes": {
+    "s3fs": "Installs s3fs from source"
+  },
+  "groupings": {
+  },
+  "conflicting": {
+  },
+  "replacing": {
+  },
+  "description": "Installs/Configures s3fs",
+  "providing": {
   }
 }
