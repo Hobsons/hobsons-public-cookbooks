@@ -49,7 +49,7 @@ bash "install fuse" do
   code <<-EOH
   tar zxvf fuse-2.8.6.tar.gz
   cd fuse-2.8.6
-  configure
+  ./configure
   make
   make install
   EOH
@@ -60,7 +60,7 @@ bash "install s3fs" do
   code <<-EOH
   tar zxvf s3fs-1.61.tar.gz
   cd s3fs-1.61
-  configure
+  ./configure
   make
   make install
   EOH
