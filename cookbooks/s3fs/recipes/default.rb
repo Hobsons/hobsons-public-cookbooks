@@ -22,9 +22,16 @@ include_recipe "build-essential"
   package pkg
 end
 
-%w{ fuse libfuse2 fuse-utils  }.each do |pkg|
-  package pkg
-    action :remove
+package fuse-utils do
+	action :remove
+end
+
+package libfuse2 do
+	action :remove
+end
+
+package fuse do
+	action :remove
 end
 
 remote_file "/tmp/fuse-2.8.6.tar.gz" do
