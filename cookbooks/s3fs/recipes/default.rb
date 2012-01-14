@@ -22,12 +22,31 @@ include_recipe "build-essential"
   package pkg
 end
 
+%w{ fuse libfuse2 fuse-utils  }.each do |pkg|
+  package pkg
+    action :remove
+end
+
+remote_file "/tmp/fuse-2.8.6.tar.gz" do
+  source "http://iweb.dl.sourceforge.net/project/fuse/fuse-2.X/2.8.6/fuse-2.8.6.tar.gz"
+  mode 0644
+end
+
 remote_file "/tmp/s3fs-1.61.tar.gz" do
   source "http://s3fs.googlecode.com/files/s3fs-1.61.tar.gz"
   mode 0644
 end
 
-#http://iweb.dl.sourceforge.net/project/fuse/fuse-2.X/2.8.6/fuse-2.8.6.tar.gz
+bash "install fuse" do
+  cwd "/tmp"
+  code <<-EOH
+  tar zxvf fuse-2.8.6.tar.gz
+  cd fuse-2.8.6
+  configure
+  make
+  make install
+  EOH
+end
 
 bash "install s3fs" do
   cwd "/tmp"
@@ -38,6 +57,5 @@ bash "install s3fs" do
   make
   make install
   EOH
-  
   not_if { File.exists?("/usr/bin/s3fs") }
 end
