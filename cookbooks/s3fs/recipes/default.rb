@@ -22,15 +22,15 @@ include_recipe "build-essential"
   package pkg
 end
 
-package fuse-utils do
+package "fuse-utils" do
 	action :remove
 end
 
-package libfuse2 do
+package "libfuse2" do
 	action :remove
 end
 
-package fuse do
+package "fuse" do
 	action :remove
 end
 
