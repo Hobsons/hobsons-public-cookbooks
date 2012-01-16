@@ -5,6 +5,58 @@
   "name": "s3fs",
   "maintainer_email": "pmcfadin@hobsons.com",
   "attributes": {
+    "s3fs/s3_bucket_name": {
+      "required": "required",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "type": "string",
+      "recipes": [
+        "s3fs::mount"
+      ],
+      "display_name": "S3 bucket name",
+      "description": "Name of S3 bucket to mount with S3fs"
+    },
+    "s3fs/aws_secret_access_key": {
+      "required": "required",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "type": "string",
+      "recipes": [
+        "s3fs::mount"
+      ],
+      "display_name": "AWS Secret Access Key for S3fs",
+      "description": ""
+    },
+    "s3fs/mount_point": {
+      "required": "required",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "type": "string",
+      "recipes": [
+        "s3fs::mount"
+      ],
+      "display_name": "Mount point for S3fs",
+      "description": "Name of directory to mount. If ti doesn't exist, it will be created."
+    },
+    "s3fs/aws_access_key_id": {
+      "required": "required",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "type": "string",
+      "recipes": [
+        "s3fs::mount"
+      ],
+      "display_name": "AWS Access Key for S3fs",
+      "description": ""
+    }
   },
   "license": "Apache 2.0",
   "suggestions": {
@@ -17,7 +69,8 @@
   "recommendations": {
   },
   "recipes": {
-    "s3fs": "Installs s3fs from source"
+    "s3fs": "Installs s3fs from source",
+    "mount": "Mounts S3 bucket using s3fs"
   },
   "groupings": {
   },
