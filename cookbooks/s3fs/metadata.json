@@ -69,8 +69,8 @@
   "recommendations": {
   },
   "recipes": {
-    "s3fs": "Installs s3fs from source",
-    "mount": "Mounts S3 bucket using s3fs"
+    "s3fs::mount": "Mounts S3 bucket using s3fs",
+    "s3fs::default": "Installs s3fs from source"
   },
   "groupings": {
   },
