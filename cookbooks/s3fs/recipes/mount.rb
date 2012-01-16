@@ -39,8 +39,8 @@ end
 bash "mount s3fs" do
   cwd "/tmp"
   code <<-EOH
-  /usr/bin/s3fs #{ node[:s3fs][:s3_bucket_name] } -o allow_other /mnt/#{ node[:s3fs][:mount_point] } 
+  /usr/local/bin/s3fs #{ node[:s3fs][:s3_bucket_name] } -o allow_other #{ node[:s3fs][:mount_point] } 
   EOH
   
-  not_if { File.exists?("/usr/bin/s3fs") }
+  not_if { File.exists?("/usr/local/bin/s3fs") }
 end
