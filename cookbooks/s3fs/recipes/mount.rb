@@ -22,7 +22,7 @@
 bash "create passwd file" do
 	cwd "/root"
 	code <<-EOH
-	echo "#{ node[:aws_access_key_id] }:#{ node[:aws_secret_access_key] }" > ~/.passwd-s3fs
+	echo "#{ node[:s3fs][:aws_access_key_id] }:#{ node[:s3fs][:aws_secret_access_key] }" > .passwd-s3fs
 	chmod 600 .passwd-s3fs
 	EOH
 
