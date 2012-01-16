@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-include_recipe "s3fs::default"
+#include_recipe "s3fs::default"
 
 bash "create passwd file" do
 	cwd "/root"
@@ -39,7 +39,7 @@ end
 bash "mount s3fs" do
   cwd "/tmp"
   code <<-EOH
-  s3fs #{ node[:s3fs][:s3_bucket_name] } -o allow_other /mnt/#{ node[:s3fs][:mount_point] } 
+  /usr/bin/s3fs #{ node[:s3fs][:s3_bucket_name] } -o allow_other /mnt/#{ node[:s3fs][:mount_point] } 
   EOH
   
   not_if { File.exists?("/usr/bin/s3fs") }
