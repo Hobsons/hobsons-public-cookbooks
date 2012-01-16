@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-include_recipe "sffs::default"
+include_recipe "s3fs::default"
 
 bash "create passwd file" do
 	cwd "/root"
