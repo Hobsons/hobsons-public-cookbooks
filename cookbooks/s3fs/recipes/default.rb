@@ -18,8 +18,15 @@
 #
 include_recipe "build-essential"
 
-%w{ pkg-config libcurl4-openssl-dev }.each do |pkg|
-  package pkg
+if platform?("redhat", "centos", "fedora")
+  # code for only redhat family systems.
+end
+ 
+if platform?("ubuntu")
+  	# code for only ubuntu systems
+	%w{ pkg-config libcurl4-openssl-dev }.each do |pkg|
+  		package pkg
+	end
 end
 
 package "fuse-utils" do
@@ -52,6 +59,7 @@ bash "install fuse" do
   ./configure
   make
   make install
+  ldconfig
   EOH
 end
 
