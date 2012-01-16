@@ -28,12 +28,12 @@ bash "create passwd file" do
 
 end
 
-directory node[:s3fs][:bucket] do
+directory node[:s3fs][:mount_point] do
   owner "root"
   group "root"
   mode "0755"
   action :create
-  not_if { File.exists?(node[:s3fs][:bucket]) }
+  not_if { File.exists?(node[:s3fs][:mount_point]) }
 end
 
 bash "mount s3fs" do
