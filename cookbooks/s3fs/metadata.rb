@@ -5,8 +5,8 @@ description      "Installs/Configures s3fs"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.rdoc'))
 version          "0.0.1"
 
-recipe           "s3fs", "Installs s3fs from source"
-recipe           "mount", "Mounts S3 bucket using s3fs"
+recipe           "s3fs::default", "Installs s3fs from source"
+recipe           "s3fs::mount", "Mounts S3 bucket using s3fs"
 
 depends          "build-essential"
 
