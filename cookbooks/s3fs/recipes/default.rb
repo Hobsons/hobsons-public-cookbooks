@@ -20,6 +20,13 @@ include_recipe "build-essential"
 
 if platform?("redhat", "centos", "fedora")
   # code for only redhat family systems.
+  	%w{ curl-devel libxml2-devel openssl-devel mailcap}.each do |pkg|
+  		package pkg
+	end
+	
+	package "fuse*" do
+		action :remove
+	end
 end
  
 if platform?("ubuntu")
@@ -27,18 +34,18 @@ if platform?("ubuntu")
 	%w{ pkg-config libcurl4-openssl-dev }.each do |pkg|
   		package pkg
 	end
-end
 
-package "fuse-utils" do
-	action :remove
-end
+	package "fuse-utils" do
+		action :remove
+	end
 
-package "libfuse2" do
-	action :remove
-end
+	package "libfuse2" do
+		action :remove
+	end
 
-package "fuse" do
-	action :remove
+	package "fuse" do
+		action :remove
+	end
 end
 
 remote_file "/tmp/fuse-2.8.6.tar.gz" do
