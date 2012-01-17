@@ -67,7 +67,6 @@ bash "install fuse" do
   make
   make install
   ldconfig
-  /etc/init.d/fuse restart
   EOH
 end
 
@@ -76,7 +75,7 @@ bash "install s3fs" do
   code <<-EOH
   tar zxvf s3fs-1.61.tar.gz
   cd s3fs-1.61
-  ./configure
+  ./configure --prefix=/usr
   make
   make install
   EOH
