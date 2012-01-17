@@ -63,7 +63,7 @@ bash "install fuse" do
   code <<-EOH
   tar zxvf fuse-2.8.6.tar.gz
   cd fuse-2.8.6
-  ./configure
+  ./configure --prefix=/usr
   make
   make install
   ldconfig
