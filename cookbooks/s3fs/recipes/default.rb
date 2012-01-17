@@ -48,8 +48,8 @@ if platform?("ubuntu")
 	end
 end
 
-remote_file "/tmp/fuse-2.8.6.tar.gz" do
-  source "http://iweb.dl.sourceforge.net/project/fuse/fuse-2.X/2.8.6/fuse-2.8.6.tar.gz"
+remote_file "/tmp/fuse-2.8.4.tar.gz" do
+  source "http://iweb.dl.sourceforge.net/project/fuse/fuse-2.X/2.8.4/fuse-2.8.4.tar.gz"
   mode 0644
 end
 
@@ -61,8 +61,8 @@ end
 bash "install fuse" do
   cwd "/tmp"
   code <<-EOH
-  tar zxvf fuse-2.8.6.tar.gz
-  cd fuse-2.8.6
+  tar zxvf fuse-2.8.4.tar.gz
+  cd fuse-2.8.4
   ./configure --prefix=/usr
   make
   make install
