@@ -67,6 +67,7 @@ bash "install fuse" do
   make
   make install
   ldconfig
+  /etc/init.d/fuse restart
   EOH
 end
 
